@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&family=Orbitron:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/CSS/nav.css">
+    <link rel="stylesheet" href="/CSS/pourLog.css">
 </head>
 <body>
     <div class="body">
@@ -33,27 +34,41 @@
         </div>
         <div class="mainCont">
             <div class="breweryCont">
-                <div class="beerForm">
+                <div class="brewForm">
                     <h1>Brewery</h1>
-                    <form action="" method="post">
-                        <input type="text" placeholder="Brewery Name">
-                        <label for="date">Date Visited:</label>
-                        <input type="date" id="date">
-                        <input type="text" placeholder="City">
-                        <input type="text" placeholder="State">
+                    <div class="brewUser">
+                        <input type="text" class="brewName" placeholder="Brewery Name">
+                        <input type="date" class="brewDate">
+                        <input type="text" class="brewCity" placeholder="City">
+                        <input list="states" class="brewState" placeholder="Select State">
+                        <datalist id="states">
+                            <option value="AL">AL</option><option value="AK">AK</option><option value="AR">AR</option><option value="AZ">AZ</option>
+                            <option value="CA">CA</option><option value="CO">CO</option><option value="CT">CT</option><option value="DC">DC</option>
+                            <option value="DE">DE</option><option value="FL">FL</option><option value="GA">GA</option><option value="HI">HI</option>
+                            <option value="IA">IA</option><option value="ID">ID</option><option value="IL">IL</option><option value="IN">IN</option>
+                            <option value="KS">KS</option><option value="KY">KY</option><option value="LA">LA</option><option value="MA">MA</option>
+	                        <option value="MD">MD</option><option value="ME">ME</option><option value="MI">MI</option><option value="MN">MN</option>
+                            <option value="MO">MO</option><option value="MS">MS</option><option value="MT">MT</option><option value="NC">NC</option>
+                            <option value="NE">NE</option><option value="NH">NH</option><option value="NJ">NJ</option><option value="NM">NM</option>
+                            <option value="NV">NV</option><option value="NY">NY</option><option value="ND">ND</option><option value="OH">OH</option>
+                            <option value="OK">OK</option><option value="OR">OR</option><option value="PA">PA</option><option value="RI">RI</option>
+	                        <option value="SC">SC</option><option value="SD">SD</option><option value="TN">TN</option><option value="TX">TX</option>
+                            <option value="UT">UT</option><option value="VT">VT</option><option value="VA">VA</option><option value="WA">WA</option>
+                            <option value="WI">WI</option><option value="WV">WV</option><option value="WY">WY</option><option value="Out of States">Out of States</option>
+                        </datalist>
                         <button type="submit">Add</button>
-                    </form>
+                    </div>
                 </div>
             </div>
             <div class="beerCont">
                 <div class="beerForm">
                     <h1>Brews</h1>
-                    <form action="" method="post">
+                    <div class="userBeer">
                         <input type="text" placeholder="Beer Name">
                         <input type="text" placeholder="Beer Type">
                         <input type="text" placeholder="Maker">
                         <button type="submit">Add</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
