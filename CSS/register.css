@@ -29,11 +29,11 @@
   margin: 0;
   color: #e6af2e;
 }
-.registerDiv form {
+.regUser {
   border-top: none;
   padding: 20px;
 }
-.registerDiv button {
+.regUser button {
   font-family: "Orbitron", sans-serif;
   color: #f5d061;
   width: 150px;
@@ -43,7 +43,7 @@
   border-radius: 20px;
   cursor: pointer;
 }
-.registerDiv button:hover {
+.regUser button:hover {
   background-color: #f5d061;
   color: #282f44;
   border: 1px solid #282f44;
@@ -57,7 +57,8 @@
   width: 600px;
   border-radius: 65px;
 }
-.registerDiv form div input {
+.regUser input {
+  display: block;
   font-family: "El Messiri", sans-serif;
   margin: 15px;
   height: 30px;
@@ -66,10 +67,15 @@
   border: 1px solid #f5d061;
 }
 @media (max-width: 650px) {
-  .pageImg {
-    display: none;
+  .mainCont {
+    display: flex;
+    flex-direction: column;
   }
   .registerDiv {
     margin: 20px 10px 10px 10px;
+  }
+  .pageImg {
+    height: 400px;
+    width: 300px;
   }
 }
