@@ -52,4 +52,88 @@ app.post("/create_users", async (req, res) => {
     });
     res.send(`Inserted New user with ${newUser.firstName} ${newUser.id}`);
   });
-app.listen(PORT, console.log(`Listening on port ${PORT}`));
+
+// ************
+
+// Read Routes for Tables
+
+app.post("/get_users", async (req,res) => {
+    const list = await Register.findAll();
+    res.send(list); 
+  });
+
+  app.post("/get_breweries", async (req,res) => {
+    const list = await Brewery.findAll();
+    res.send(list); 
+  });
+
+  app.post("/get_beers", async (req,res) => {
+    const list = await Beers.findAll();
+    res.send(list); 
+  });
+
+// ************
+
+// Update Routes for Tables
+
+app.post("/update_user/:id", async (req,res) => {
+    const update = await Register.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.send(update);
+  });
+
+  app.post("/update_brewery/:id", async (req,res) => {
+    const update = await Brewery.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.send(update);
+  });
+
+  app.post("/update_beer/:id", async (req,res) => {
+    const update = await Beers.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.send(update);
+  });
+
+// ************
+
+// Deltete Routes for Tables
+
+app.post("/delete_user/:id", async (req,res) => {
+    const user = await Register.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.send("Deleted");
+  });
+
+  app.post("/delete_brewery/:id", async (req,res) => {
+    const user = await Brewery.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.send("Deleted");
+  });
+  
+  app.post("/delete_beer/:id", async (req,res) => {
+    const user = await Beers.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.send("Deleted");
+  });
+  
+// // ************
+
+  app.listen(PORT, console.log(`Listening on port ${PORT}`));
