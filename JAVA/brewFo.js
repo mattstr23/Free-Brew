@@ -3,13 +3,13 @@ const navLinks = document.querySelector(".navLinks");
 const loginBut = document.querySelector(".loginBut");
 const modal = document.querySelector(".modalBG");
 const close = document.querySelector(".close");
-const userName = document.querySelector(".userName");
-const pass = document.querySelector(".pass");
+const logUserName = document.querySelector(".logUserName");
+const logPass = document.querySelector(".logPass");
 const logBut = document.querySelector(".logBut");
 
 function clearInput() {
-    userName.value = "";
-    pass.value = "";
+    logUserName.value = "";
+    logPass.value = "";
 }
 
 toggleMen.addEventListener("click", () => {navLinks.classList.toggle("active")});

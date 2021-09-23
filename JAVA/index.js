@@ -1,19 +1,17 @@
-const toggleMen = document.querySelector(".toggleMenu");
-const navLinks = document.querySelector(".navLinks");
 const loginBut = document.querySelector(".loginBut");
 const modal = document.querySelector(".modalBG");
 const close = document.querySelector(".close");
-const userName = document.querySelector(".userName");
-const pass = document.querySelector(".pass");
-const logBut = document.querySelector(".logBut");
+const logUserName = document.querySelector(".logUserName");
+const logPass = document.querySelector(".logPass");
+const logBut = document.querySelector(".homeLogBut");
 
 function clearInput() {
-    userName.value = "";
-    pass.value = "";
+    logUserName.value = "";
+    logPass.value = "";
 }
 
-toggleMen.addEventListener("click", () => {navLinks.classList.toggle("active")});
-loginBut.addEventListener("click", () => {modal.style.display = "flex"});
+
+logBut.addEventListener("click", () => {modal.style.display = "flex"});
 close.addEventListener("click", () => {modal.style.display = "none"});
 window.addEventListener("click", (e) => {if(e.target == modal){modal.style.display = "none"}});
 window.addEventListener("click", (e) => {if(e.target == modal){clearInput()}});
