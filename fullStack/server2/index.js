@@ -6,14 +6,17 @@ const { Beers } = require("./models")
 const express = require("express");
 const app = express();
 const PORT = 3010;
-// const cors = require("cors")
+const cors = require("cors")
+
+// app.use(express.static(__dirname + '/public'));
 
 
 
 
 // Middleware
 app.use(express.json());
-// app.use(cors());
+app.use(express.static(__dirname + '/public.'));
+app.use(cors());
 // ************
 
 // Create Route for Tables 
@@ -108,6 +111,7 @@ app.post("/update_user/:id", async (req,res) => {
 // Deltete Routes for Tables
 
 app.post("/delete_user/:id", async (req,res) => {
+  
     const user = await Register.destroy({
       where: {
         id: req.params.id,
@@ -122,9 +126,24 @@ app.post("/delete_user/:id", async (req,res) => {
         id: req.params.id,
       },
     });
+    console.log(user)
     res.send("Deleted");
   });
   
+
+  app.post("/delete_brew/:breweryName", async (req,res) => {
+    
+
+    const user = await Brewery.destroy({
+      where: {
+        breweryName: req.params.breweryName,
+      },
+    });
+    console.log("this is what user is",user)
+    res.send("Deleted");
+  });
+
+
   app.post("/delete_beer/:id", async (req,res) => {
     const user = await Beers.destroy({
       where: {

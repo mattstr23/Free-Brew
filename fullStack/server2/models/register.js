@@ -10,9 +10,9 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Register.hasMany(models.Brewery, {
-        foreignKey: "name"
-      });
+      // Register.hasMany(models.Brewery, {
+      //   foreignKey: "name"
+      // });
       // define association here
     }
   };
