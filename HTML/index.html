@@ -10,40 +10,44 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&family=Orbitron:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/CSS/nav.css">
+    <link rel="stylesheet" href="/CSS/index.css">
 </head>
 <body>
     <div class="body">
-        <div class="navDiv">
-            <nav class="navBar">
-                <div class="siteLogo"><a href="index.html"><img src="/Extras/logo.png" alt="" srcset=""></a></div>
-                    <a href="#" class="toggleMenu">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </a>
-                <div class="navLinks">
-                    <ul>
-                        <li><a href="#" class="loginBut">Login</a></li>
-                        <li><a href="/HTML/register.html">Register</a></li>
-                        <li><a href="/HTML/brewFo.html">BrewFo</a></li>
-                        <li><a href="/HTML/pourLog.html">PourLog</a></li>
-                    </ul>
+        <div class="mainCont">
+            <div class="logo">
+                <img src="/Extras/FreeBrew Logo (165 x 95 px) (200 x 125 px) (330 x 500 px).png" alt="" srcset="">
+            </div>
+            <div class="flowCont">
+                <div class="login">
+                    <input class="userName" type="text" placeholder="User Name" required>
+                    <input class="pass" type="password" placeholder="Password" required>
+                    <button class ="loginBut" type="submit">Log In</button>
                 </div>
-            </nav>
+                <div class="register">
+
+                </div>
+                <div class="brewFo">
+
+                </div>
+                <div class="pourLog">
+
+                </div>
+            </div>
         </div>
         <div class="modalBG">
             <div class="modalLogin">
                 <div class="close">&times;</div>
-                <img src="/Extras/logo.png" alt="">
+                <img src="/Extras/LogoSmall.png" alt="">
                 <div class="userArea">
                     <input class="userName" type="text" placeholder="User Name" required>
                     <input class="pass" type="password" placeholder="Password" required>
-                    <button type="submit">Log In</button>
-                    <a href="/HTML/register.html">Click to Create an Account</a></p>
+                    <button class ="loginBut" type="submit">Log In</button>
+                    <a href="/HTML/register.html">Click to Create an Account</a>
                 </div>
             </div>
         </div>
     </div>
 </body>
-<script src="/JAVA/nav.js"></script>
+<script src="/JAVA/index.js"></script>
 </html>

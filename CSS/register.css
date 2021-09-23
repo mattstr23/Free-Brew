@@ -14,10 +14,15 @@
   width: 100%;
 }
 .registerDiv {
+  display: flex;
+  flex-direction: column;
+  width: 325px;
+  height: 350px;
   border-radius: 12px 12px 5px 5px;
   margin: 15px 30px 15px 15px;
   text-align: center;
   border: 1px solid #dadada;
+  background-color: white;
 }
 .registerDiv h1 {
   font-family: "Orbitron", sans-serif;
@@ -30,10 +35,12 @@
   color: #e6af2e;
 }
 .regUser {
+  height: 100%;
   border-top: none;
   padding: 20px;
 }
 .regUser button {
+  margin-top: 15px;
   font-family: "Orbitron", sans-serif;
   color: #f5d061;
   width: 150px;
@@ -48,17 +55,24 @@
   color: #282f44;
   border: 1px solid #282f44;
 }
+.registerDiv a {
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #282f44;
+}
+.registerDiv a:hover {
+  text-shadow: 1px 1px #f5d061;
+}
 .pageImg {
   background-image: url("/Extras/registerPic.jpeg");
   background-repeat: none;
   background-size: cover;
-  margin: 75px 15px 15px 30px;
+  margin: 75px 15px 30px 15px;
   height: 500px;
   width: 600px;
   border-radius: 65px;
 }
 .regUser input {
-  display: block;
   font-family: "El Messiri", sans-serif;
   margin: 15px;
   height: 30px;
@@ -72,7 +86,8 @@
     flex-direction: column;
   }
   .registerDiv {
-    margin: 20px 10px 10px 10px;
+    margin: 20px 5px 5px 5px;
+    width: 300px;
   }
   .pageImg {
     height: 400px;

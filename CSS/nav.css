@@ -2,6 +2,10 @@ body {
   font-family: "El Messiri", sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #ececec;
+}
+::placeholder {
+  text-align: center;
 }
 .navDiv {
   width: 100%;
@@ -14,14 +18,7 @@ body {
   width: 100%;
   position: sticky;
   background-color: #282f44;
-  border-bottom: 1px inset #f5d061;
-}
-.siteLogo {
-  padding: 10px 0 10px 20px;
-}
-.siteLogo img {
-  height: 75px;
-  width: 150px;
+  border-bottom: 2px solid #f5d061;
 }
 .navLinks ul {
   margin: 0;
@@ -80,12 +77,10 @@ body {
   animation-duration: 2s;
 }
 .modalLogin img {
-  height: 65px;
-  width: 65px;
   margin-top: 30px;
 }
 .userArea {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .userArea input {
   font-family: "El Messiri", sans-serif;
@@ -136,7 +131,7 @@ body {
     opacity: 1;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 565px) {
   .toggleMenu {
     display: flex;
   }
@@ -151,5 +146,15 @@ body {
   }
   .navLinks.active {
     display: flex;
+  }
+}
+@media (max-width: 615px) {
+  .navLinks li a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 400px) {
+  .navLinks li a {
+    font-size: 14px;
   }
 }
