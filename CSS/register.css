@@ -18,7 +18,7 @@
   flex-direction: column;
   width: 325px;
   height: 350px;
-  border-radius: 12px 12px 5px 5px;
+  border-radius: 5px;
   margin: 15px 30px 15px 15px;
   text-align: center;
   border: 1px solid #dadada;
@@ -27,7 +27,7 @@
 .registerDiv h1 {
   font-family: "Orbitron", sans-serif;
   font-size: large;
-  border-radius: 12px 12px 0 0;
+  border-radius: 5px 5px 0 0;
   background-color: #282f44;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -73,7 +73,7 @@
   border-radius: 65px;
 }
 .regUser input {
-  font-family: "El Messiri", sans-serif;
+  font-family: "Raleway", sans-serif;
   margin: 15px;
   height: 30px;
   width: 200px;
