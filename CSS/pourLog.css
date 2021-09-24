@@ -1,0 +1,35 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: 100vh;
+  width: 100%;
+  background-color: #ececec;
+}
+.mainCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #ececec;
+  width: 100%;
+}
+.mainCont h1 {
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  color: #e6af2e;
+}
+.breweryCont {
+  display: flex;
+  flex-direction: column;
+}
+.brewUser {
+  display: flex;
+}
+.beerCont {
+  display: flex;
+  flex-direction: column;
+}
+.userBeer {
+  display: flex;
+}

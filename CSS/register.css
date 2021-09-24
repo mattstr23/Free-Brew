@@ -1,0 +1,96 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: 100vh;
+  width: 100%;
+  background-color: #ececec;
+}
+.mainCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ececec;
+  width: 100%;
+}
+.registerDiv {
+  display: flex;
+  flex-direction: column;
+  width: 325px;
+  height: 350px;
+  border-radius: 5px;
+  margin: 15px 30px 15px 15px;
+  text-align: center;
+  border: 1px solid #dadada;
+  background-color: white;
+}
+.registerDiv h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: large;
+  border-radius: 5px 5px 0 0;
+  background-color: #282f44;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+  color: #e6af2e;
+}
+.regUser {
+  height: 100%;
+  border-top: none;
+  padding: 20px;
+}
+.regUser button {
+  margin-top: 15px;
+  font-family: "Orbitron", sans-serif;
+  color: #f5d061;
+  width: 150px;
+  height: 35px;
+  background-color: #282f44;
+  border: 1px solid #e6af2e;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.regUser button:hover {
+  background-color: #f5d061;
+  color: #282f44;
+  border: 1px solid #282f44;
+}
+.registerDiv a {
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #282f44;
+}
+.registerDiv a:hover {
+  text-shadow: 1px 1px #f5d061;
+}
+.pageImg {
+  background-image: url("/Extras/registerPic.jpeg");
+  background-repeat: none;
+  background-size: cover;
+  margin: 75px 15px 30px 15px;
+  height: 500px;
+  width: 600px;
+  border-radius: 65px;
+}
+.regUser input {
+  font-family: "Raleway", sans-serif;
+  margin: 15px;
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #f5d061;
+}
+@media (max-width: 650px) {
+  .mainCont {
+    display: flex;
+    flex-direction: column;
+  }
+  .registerDiv {
+    margin: 20px 5px 5px 5px;
+    width: 300px;
+  }
+  .pageImg {
+    height: 400px;
+    width: 300px;
+  }
+}
