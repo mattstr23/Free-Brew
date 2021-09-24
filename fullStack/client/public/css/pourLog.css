@@ -1,0 +1,156 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: 100vh;
+  width: 100%;
+  background-color: #ececec;
+}
+.mainCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #ececec;
+  width: 100%;
+}
+.mainUserArea {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pageInfo {
+  display: flex;
+  text-align: center;
+  margin: 15px;
+  margin-top: 50px;
+  color: #282f44;
+}
+.pageInfo h1 {
+  margin: 0;
+  margin-right: 20px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 40px;
+}
+.pageInfo h3 {
+  max-width: 375px;
+}
+.breweryCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+.brewForm {
+  display: flex;
+  flex-direction: column;
+}
+.brewForm h1 {
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  color: #e6af2e;
+  margin: 0;
+  margin-bottom: 15px;
+}
+.brewUser input {
+  margin: 5px;
+  font-family: "Raleway", sans-serif;
+  color: #282f44;
+  font-size: 15px;
+  border: 1px solid #f5d061;
+  border-radius: 1px;
+}
+.brewName {
+  height: 27px;
+  width: 175px;
+}
+.brewDate {
+  width: 155px;
+  height: 29px;
+}
+.brewCity {
+  width: 175px;
+  height: 27px;
+}
+.brewState {
+  width: 115px;
+  height: 27px;
+}
+.brewUser {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.brewSub {
+  font-family: "Orbitron", sans-serif;
+  color: #e6af2e;
+  height: 32px;
+  width: 70px;
+  background-color: #282f44;
+  border: 1px solid #f5d061;
+  border-radius: 5px;
+}
+.userBrewz {
+  display: flex;
+  flex-direction: column;
+}
+.beerCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+.beerForm {
+  display: flex;
+  flex-direction: column;
+}
+.beerForm h1 {
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  color: #e6af2e;
+  margin: 0;
+  margin-bottom: 15px;
+}
+.beerForm input {
+  margin: 5px;
+  font-family: "Raleway", sans-serif;
+  color: #282f44;
+  font-size: 15px;
+  border: 1px solid #f5d061;
+  border-radius: 1px;
+}
+.beerUser {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.beerSub {
+  font-family: "Orbitron", sans-serif;
+  color: #e6af2e;
+  height: 32px;
+  width: 70px;
+  background-color: #282f44;
+  border: 1px solid #f5d061;
+  border-radius: 5px;
+}
+.beerName {
+  width: 175px;
+  height: 27px;
+}
+.beerType {
+  width: 175px;
+  height: 27px;
+}
+.maker {
+  width: 175px;
+  height: 27px;
+}

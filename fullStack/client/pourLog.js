@@ -1,20 +1,17 @@
-const submitButton = document.querySelector(".button");
-// const brewList = document.querySelector(".brewUser");
-
+//Add Brew to DB
+const brewSub = document.querySelector(".brewSub");
 const createBrew = async () => {
     const url = "http://localhost:3010/create_breweries";
     const breweryName = document.querySelector(".brewName").value;
     const date = document.querySelector(".brewDate").value;
     const city = document.querySelector(".brewCity").value;
     const state = document.querySelector(".brewState").value;
-  
-    const brewData = {        
+    const brewData = {
         breweryName,
         date,
         city,
         state,
     };
-  
     const createBrew = await fetch(url, {
       method: "POST",
       mode: "cors",
@@ -23,30 +20,30 @@ const createBrew = async () => {
       },
       body: JSON.stringify(brewData),
     });
-  };
-  
-  submitButton.addEventListener("click", () => {
-    createBrew();
-    });
 
 
-  const beerButton = document.querySelector(".beerBut");
-  
-  const createBeer = async () => {
+
+};
+brewSub.addEventListener("click", () => {
+  createBrew();
+  });
+//   if (createBrew.status === 200) {
+//     window.location.reload();
+// }
+
+//End Add Brew
+//Add Beer
+const beerSub = document.querySelector(".beerSub");
+const createBeer = async () => {
     const url = "http://localhost:3010/create_beers";
-    const userName = document.querySelector(".userName").value;
-    const beerName = document.querySelector(".beer").value;
-    const beerTyper = document.querySelector(".type").value;
+    const beerName = document.querySelector(".beerName").value;
+    const beerTyper = document.querySelector(".beerType").value;
     const maker = document.querySelector(".maker").value;
-
     const beerData = {
-      userName,
       beerName,
       beerTyper,
       maker,
-
     };
-
   const createBeer = await fetch(url, {
     method: "POST",
     mode: "cors",
@@ -55,21 +52,59 @@ const createBrew = async () => {
     },
     body: JSON.stringify(beerData),
   });
-  };
-  beerButton.addEventListener("click", () => {
-    createBeer();
+};
+
+beerSub.addEventListener("click", () => {
+  createBeer();
   });
+//End Add Beer
+//Brew Read
+const userBrewz = document.querySelector(".userBrewz");
+const brewRead = async () => {
+    const url = "http://localhost:3010/get_breweries";
+    const brewData = await fetch(url, {
+        method: "POST",
+        mode: "cors",
+        headers: {"Content-Type": "application/json",}
+    });
+    const json = await brewData.json();
+    for (const brew of json) {
+        const breName = brew.breweryName;
+        const breDate = brew.date;
+        const brewCity = brew.city;
+        const brewState = brew.State;
+        const brewDiv = document.createElement("div");
+        brewDiv.className = brewDiv;
+        const userBrewName = document.createElement("h4");
+        userBrewName.className = userBrewName;
+        const userBrewDate = document.createElement("h4");
+        userBrewDate.className = userBrewDate;
+        const userBrewCity = document.createElement("h4");
+        userBrewCity.className = userBrewCity;
+        const userBrewState = document.createElement("h4");
+        userBrewState.className = userBrewState;
+        const deleteButton = document.createElement("button");
+        deleteButton.className = `brewery-${brew.breweryName}`;
+        deleteButton.innerHTML = "Delete";
+        deleteButton.addEventListener("click", () => deleteBrewery(brew.breweryName));
+        userBrewName.innerHTML = `${breName}`;
+        userBrewDate.innerHTML = `${breDate}`;
+        userBrewCity.innerHTML = `${brewCity}`;
+        userBrewState.innerHTML = `${brewState}`;
+        brewDiv.append(userBrewName, userBrewDate, userBrewCity, userBrewState);
+        userBrewz.append(brewDiv);
+    }
+    if (brewRead.status === 200) {
+      window.location.reload();
+    }
+};
 
-
-  const deleteBrewBut = document.querySelector(".delete")
-    const deleteBrewery = async () => {
-    const brewDel = document.querySelector(".brewName").value
-      const url = `http://localhost:3010/delete_brew/${brewDel}`;
+const buttonList = document.querySelector(".buttonList");
+buttonList.addEventListener("click", () => brewRead());
+// Delete Brew
+    const deleteBrewery = async (breweryName) => {
+      const url = `http://localhost:3010/delete_brew/${breweryName}`;
       console.log(url)
-
-      const breweryDelete = {
-        brewDel,
-      }
       const deleteBrewery = await fetch(url, {
         method: "POST",
         mode: "cors",
@@ -77,27 +112,6 @@ const createBrew = async () => {
           "Content-Type": "application/json",
         },
       });
+ 
   };
-  deleteBrewBut.addEventListener("click", () => {
-    deleteBrewery();
-  });
 
-
-  const deleteBeerBut = document.querySelector(".deleteBeer")
-  const deleteBeer = async () => {
-  const beerDel = document.querySelector(".beer").value
-    const url = `http://localhost:3010/delete_beer/${beerDel}`;
-    console.log(url)
-
-   
-    const deleteBrewery = await fetch(url, {
-      method: "POST",
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-};
-deleteBeerBut.addEventListener("click", () => {
-  deleteBeer();
-});
