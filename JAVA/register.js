@@ -23,3 +23,36 @@ window.addEventListener("click", (e) => {if(e.target == modal){clearInput()}});
 close.addEventListener("click", () => {clearInput()});
 //User JS End
 
+
+const submitButton = document.querySelector(".regSub");
+
+
+const createUser = async () => {
+    const url = "http://localhost:3010/create_users";
+    const userName = document.querySelector(".regUserName").value;
+    const email = document.querySelector(".regEmail").value;
+    const password = document.querySelector(".regPassword").value;
+  
+    const userData = {
+      userName,
+      email,
+      password,
+    };
+  
+    const createUser = await fetch(url, {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userData),
+    });
+    if (createUser.status === 200) {
+        window.location.reload();
+    }
+  };
+  submitButton.addEventListener("click", () => {
+    createUser();
+  });
+
+
