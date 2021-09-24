@@ -8,15 +8,15 @@
     <title>PourLog</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&family=Orbitron:wght@700&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="/CSS/nav.css">
-    <link rel="stylesheet" href="/CSS/pourLog.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="C:\Users\josea\Desktop\FullStackProject\fullStack\client\public\css\nav.css">
+    <link rel="stylesheet" href="C:\Users\josea\Desktop\FullStackProject\fullStack\client\public\css\pourLog.css">
 </head>
 <body>
     <div class="body">
         <div class="navDiv">
             <nav class="navBar">
-                <!-- <div class="siteLogo"><a href="index.html"><img src="/Extras/logo.png" alt="" srcset=""></a></div> -->
+                <div class="siteLogo"><a href="index.html"><img src="/Extras/LogoSmall.png" alt="" srcset=""></a></div>
                     <a href="#" class="toggleMenu">
                         <span class="bar"></span>
                         <span class="bar"></span>
@@ -37,12 +37,10 @@
                 <div class="brewForm">
                     <h1>Brewery</h1>
                     <div class="brewUser">
-                        <!-- <input class="nameUser" type="text" placeholder="Name"> -->
                         <input type="text" class="brewName" placeholder="Brewery Name">
                         <input type="date" class="brewDate">
                         <input type="text" class="brewCity" placeholder="City">
                         <input list="states" class="brewState" placeholder="Select State">
-                        
                         <datalist id="states">
                             <option value="AL">AL</option><option value="AK">AK</option><option value="AR">AR</option><option value="AZ">AZ</option>
                             <option value="CA">CA</option><option value="CO">CO</option><option value="CT">CT</option><option value="DC">DC</option>
@@ -58,9 +56,8 @@
                             <option value="UT">UT</option><option value="VT">VT</option><option value="VA">VA</option><option value="WA">WA</option>
                             <option value="WI">WI</option><option value="WV">WV</option><option value="WY">WY</option><option value="Out of States">Out of States</option>
                         </datalist>
-                        <button class="button" type="submit">Add</button>
-                        <!-- <input class="nameDel" type="text" placeholder="Brewery Name"> -->
-                        <button class="delete" type="submit">Delete</button>
+                        <button class="brewSub" type="submit">Add</button>
+ 
                     </div>
                 </div>
             </div>
@@ -68,29 +65,29 @@
                 <div class="beerForm">
                     <h1>Brews</h1>
                     <div class="userBeer">
-                        <input class="userName" type="text" placeholder="User Name">
-                        <input class="beer" type="text" placeholder="Beer Name">
-                        <input class="type" type="text" placeholder="Beer Type">
+                        <input class="beerName" type="text" placeholder="Beer Name">
+                        <input class="beerType" type="text" placeholder="Beer Type">
                         <input class="maker" type="text" placeholder="Maker">
-                        <button class="beerBut" type="submit">Add</button>
+                        <button class="beerSub" type="submit">Add</button>
                     </div>
                 </div>
             </div>
+            <div class="userBrewz"></div>
+            <button class="buttonList">View All</button>
         </div>
         <div class="modalBG">
             <div class="modalLogin">
                 <div class="close">&times;</div>
-                <img src="/Extras/logo.png" alt="">
+                <img src="/Extras/LogoSmall.png" alt="">
                 <div class="userArea">
-                    <input class="userName" type="text" placeholder="User Name" required>
-                    <input class="pass" type="password" placeholder="Password" required>
-                    <button class= "beerBut" type="submit">Log In</button>
-                    <a href="/HTML/register.html">Click to Create an Account</a></p>
+                    <input class="logUserName" type="text" placeholder="User Name" required>
+                    <input class="logPass" type="password" placeholder="Password" required>
+                    <button class="loginBut" type="submit">Log In</button>
+                    <a href="/HTML/register.html">Click to Create an Account</a>
                 </div>
             </div>
         </div>
     </div>
-    
 </body>
 <script src="pourLog.js"></script>
 </html>
