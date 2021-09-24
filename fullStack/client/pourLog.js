@@ -81,3 +81,23 @@ const createBrew = async () => {
   deleteBrewBut.addEventListener("click", () => {
     deleteBrewery();
   });
+
+
+  const deleteBeerBut = document.querySelector(".deleteBeer")
+  const deleteBeer = async () => {
+  const beerDel = document.querySelector(".beer").value
+    const url = `http://localhost:3010/delete_beer/${beerDel}`;
+    console.log(url)
+
+   
+    const deleteBrewery = await fetch(url, {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+};
+deleteBeerBut.addEventListener("click", () => {
+  deleteBeer();
+});

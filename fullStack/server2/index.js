@@ -66,12 +66,17 @@ app.post("/get_users", async (req,res) => {
   });
 
   app.post("/get_breweries", async (req,res) => {
-    const list = await Brewery.findAll();
+    const list = await Brewery.findAll({
+      attributes: ["breweryName", "date","city", "state"]
+    }
+    );
     res.send(list); 
   });
 
   app.post("/get_beers", async (req,res) => {
-    const list = await Beers.findAll();
+    const list = await Beers.findAll({
+      attributes: ["beerName", "beerTyper", "maker"]
+    });
     res.send(list); 
   });
 
@@ -144,14 +149,17 @@ app.post("/delete_user/:id", async (req,res) => {
   });
 
 
-  app.post("/delete_beer/:id", async (req,res) => {
+  app.post("/delete_beer/:beerName", async (req,res) => {
     const user = await Beers.destroy({
       where: {
-        id: req.params.id,
+        beerName: req.params.beerName,
       },
     });
+    console.log("this is what user is",user)
     res.send("Deleted");
   });
+
+  
   
 // // ************
 
