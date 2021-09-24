@@ -1,3 +1,4 @@
+//User JS STart
 const toggleMen = document.querySelector(".toggleMenu");
 const navLinks = document.querySelector(".navLinks");
 const loginBut = document.querySelector(".loginBut");
@@ -18,3 +19,5 @@ close.addEventListener("click", () => {modal.style.display = "none"});
 window.addEventListener("click", (e) => {if(e.target == modal){modal.style.display = "none"}});
 window.addEventListener("click", (e) => {if(e.target == modal){clearInput()}});
 close.addEventListener("click", () => {clearInput()});
+//User JS End
+
