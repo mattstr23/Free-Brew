@@ -42,10 +42,10 @@
                     <div class="brewForm">
                         <h1>Brewery</h1>
                         <div class="brewUser">
-                            <input type="text" class="brewName" placeholder="Brewery Name">
-                            <input type="date" class="brewDate">
-                            <input type="text" class="brewCity" placeholder="City">
-                            <input list="states" class="brewState" placeholder="Select State">
+                            <input type="text" class="brewName" placeholder="Brewery Name" required>
+                            <input type="date" class="brewDate" required>
+                            <input type="text" class="brewCity" placeholder="City" required>
+                            <input list="states" class="brewState" placeholder="Select State" required>
                             <datalist id="states">
                                 <option value="AL">AL</option><option value="AK">AK</option><option value="AR">AR</option><option value="AZ">AZ</option>
                                 <option value="CA">CA</option><option value="CO">CO</option><option value="CT">CT</option><option value="DC">DC</option>
@@ -74,9 +74,9 @@
                     <div class="beerForm">
                         <h1>Beers</h1>
                         <div class="beerUser">
-                            <input class="beerName" type="text" placeholder="Beer Name">
-                            <input class="beerType" type="text" placeholder="Beer Type">
-                            <input class="maker" type="text" placeholder="Maker">
+                            <input class="beerName" type="text" placeholder="Beer Name" required>
+                            <input class="beerType" type="text" placeholder="Beer Type" required>
+                            <input class="maker" type="text" placeholder="Maker" required>
                             <button class="beerSub" type="submit">Add</button>
                         </div>
                     </div>
@@ -100,5 +100,5 @@
         </div>
     </div>
 </body>
-<script src="/JAVA/pourLog.js"></script>
+<script src="../JAVA/pourLog.js"></script>
 </html>

@@ -1,13 +1,13 @@
 // const { markAsUntransferable } = require("worker_threads");
 
-const submitButton = document.querySelector(".create");
-const userList = document.querySelector(".users");
+const submitButton = document.querySelector(".regSub");
+
 
 const createUser = async () => {
     const url = "http://localhost:3010/create_users";
-    const userName = document.querySelector(".userName").value;
-    const email = document.querySelector(".email").value;
-    const password = document.querySelector(".password").value;
+    const userName = document.querySelector(".regUserName").value;
+    const email = document.querySelector(".regEmail").value;
+    const password = document.querySelector(".regPassword").value;
   
     const userData = {
       userName,

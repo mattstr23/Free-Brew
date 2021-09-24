@@ -15,7 +15,7 @@ const cors = require("cors")
 
 // Middleware
 app.use(express.json());
-app.use(express.static(__dirname + '/public.'));
+app.use(express.static(__dirname + '/JAVA'));
 app.use(cors());
 // ************
 

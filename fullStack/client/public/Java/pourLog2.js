@@ -20,16 +20,16 @@ const createBrew = async () => {
       },
       body: JSON.stringify(brewData),
     });
-
+  if (createBrew.status === 200) {
+    window.location.reload();
+}
 
 
 };
 brewSub.addEventListener("click", () => {
   createBrew();
   });
-//   if (createBrew.status === 200) {
-//     window.location.reload();
-// }
+
 
 //End Add Brew
 //Add Beer
