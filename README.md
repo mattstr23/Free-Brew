@@ -30,7 +30,7 @@ The main front end to back end occurs on the PourLog page.
 Here users can communicate to the database with brewery info and beer info, layed out as so:
 - Brewery: Name, date visited, city, state.
 - Beer: Name, type, maker.
- Users can also delete any inputs created in either field.
+- Users can also delete any inputs created in either field.
 Frontend to Backend flow is charted below.
 ![Screen Shot 2021-09-24 at 7 49 36 PM](https://user-images.githubusercontent.com/88062670/134754740-2cf1ca63-f1e4-49c7-acd8-560407864a03.png)
 
