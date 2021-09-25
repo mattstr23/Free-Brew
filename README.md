@@ -2,7 +2,7 @@
 # Name of project/site - FreeBrew
 # Creators - Jose Aguilar & Matthew Valicoff
 
-#This FreeBrew site/application is a full stack project. Using front end html with user areas, middle ware server interaciton, and back end database fetching to send and retrieve data.
+This FreeBrew site/application is a full stack project. Using front end html with user areas, middle ware server interaciton, and back end database fetching to send and retrieve data.
 Hopes to impove or rework features at a later time.
 
 # Tools used
