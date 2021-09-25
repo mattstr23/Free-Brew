@@ -1,6 +1,6 @@
-# FullStackProject.
-# Name of project/site - FreeBrew.
-# Creators - Jose Aguilar & Matthew Valicoff.
+# FullStackProject
+# Name of project/site - FreeBrew
+# Creators - Jose Aguilar & Matthew Valicoff
 
 This FreeBrew site/application is a full stack project. Using front end html with user areas, middle ware server interaciton, and back end database fetching to send and retrieve data.
 Hopes to impove or rework features at a later time.
@@ -18,7 +18,7 @@ Hopes to impove or rework features at a later time.
 - HTML
 - CSS
 - JavaScript
-#Description
+# Description
 This project is a knock off version of Untapped app/website. Site launches with a homepage with the option to login, register, or go to the info page.
 ![Screen Shot 2021-09-24 at 8 56 00 PM](https://user-images.githubusercontent.com/88062670/134754061-391f7aeb-aa13-4c9e-93c9-d8efbe95e476.png)
 Once into one of the pages you can navigate using the navbar up top.
